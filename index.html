@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optima - Smart Delivery Optimization</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <p class="mini-badge">AI Logistics Dashboard</p>
+      <h1>Optima</h1>
+      <p class="subtitle">
+        Smart AI delivery route system with real-time optimization, urgent delivery handling,
+        route diversion support, and live admin tracking.
+      </p>
+    </header>
+
+    <section class="flow-card">
+      <div class="step-badge">Step 1</div>
+      <h2>Input Details</h2>
+
+      <label for="locations">Total Locations</label>
+      <input type="number" id="locations" value="600" />
+
+      <label for="vehicles">Total Vehicles</label>
+      <input type="number" id="vehicles" value="18" />
+
+      <label for="maxTime">Max Route Time (hours)</label>
+      <input type="number" id="maxTime" value="2.5" step="0.1" />
+
+      <button id="allocateBtn">Allocate Deliveries</button>
+    </section>
+
+    <section class="flow-card">
+      <div class="step-badge">Step 2</div>
+      <h2>Urgent Delivery</h2>
+
+      <label for="urgentLocation">Urgent Location Number</label>
+      <input type="number" id="urgentLocation" placeholder="Example: 264" />
+
+      <button id="urgentBtn">Assign Urgent Delivery</button>
+    </section>
+
+    <section class="flow-card">
+      <div class="step-badge">Step 3</div>
+      <h2>Overall Statistics</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>Total Locations</span>
+          <h3 id="statLocations">600</h3>
+        </div>
+        <div class="stat-card">
+          <span>Total Vehicles</span>
+          <h3 id="statVehicles">18</h3>
+        </div>
+        <div class="stat-card">
+          <span>Max Route Time</span>
+          <h3 id="statMaxTime">2.5 hrs</h3>
+        </div>
+        <div class="stat-card">
+          <span>Unassigned</span>
+          <h3 id="statUnassigned">0</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow-card result-card">
+      <div class="step-badge">Step 4</div>
+      <h2>Allocation Result</h2>
+      <div id="result">Please allocate deliveries first.</div>
+    </section>
+
+    <section class="flow-card">
+      <div class="step-badge">Step 5</div>
+      <h2>Admin Live Route Map</h2>
+      <p class="map-note">
+        18 vehicles are shown using different colored route lines. Unassigned locations are marked in red.
+      </p>
+      <img
+        id="adminMapImage"
+        src="optima_admin_map.png"
+        alt="Optima Admin Route Map"
+        class="custom-map-image"
+      />
+    </section>
+
+    <section class="flow-card">
+      <div class="step-badge">Step 6</div>
+      <h2>Driver App Demo</h2>
+      <p class="map-note">
+        Open the driver-side demo here:
+        <a href="driver.html" target="_blank">Driver App</a>
+      </p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
