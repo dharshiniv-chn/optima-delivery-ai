@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optima Driver App</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #c6c4ce;
+      color: #2e2e2e;
+      padding: 20px;
+      max-width: 480px;
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: #2e2e2e;
+      color: #f5d4dd;
+      padding: 20px;
+      border-radius: 24px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(245, 212, 221, 0.12);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: #f7f5fa;
+      border: 1px solid rgba(46, 46, 46, 0.12);
+      border-radius: 22px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 18px rgba(46, 46, 46, 0.05);
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    .route-pill {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #2e2e2e;
+      color: #f5d4dd;
+      font-size: 13px;
+      margin-top: 8px;
+      margin-right: 8px;
+    }
+
+    .alert {
+      background: #2e2e2e;
+      color: #f5d4dd;
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .list-item {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(46, 46, 46, 0.1);
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .small {
+      color: #5c4a57;
+      font-size: 14px;
+    }
+
+    .driver-map-image {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid rgba(46, 46, 46, 0.12);
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="badge">Driver App</div>
+    <h1>Vehicle V-01</h1>
+    <p>Live route view with urgent updates and diversion alerts</p>
+  </div>
+
+  <div class="card">
+    <h2>Today’s Route</h2>
+    <p><strong>Total Stops:</strong> 34</p>
+    <p><strong>Estimated Distance:</strong> 48.2 km</p>
+    <p><strong>Estimated Time:</strong> 2h 18m</p>
+    <span class="route-pill">Current Stop: L042</span>
+    <span class="route-pill">Next Stop: L107</span>
+  </div>
+
+  <div class="card">
+    <h2>Driver Route Map</h2>
+    <img
+      src="optima_driver_map.png"
+      alt="Optima Driver Route Map"
+      class="driver-map-image"
+    />
+  </div>
+
+  <div class="alert">
+    🚨 Traffic detected near next area. Take diversion before entering Area 2.
+  </div>
+
+  <div class="alert">
+    ⚡ Urgent delivery added: L264. Route updated automatically.
+  </div>
+
+  <div class="card">
+    <h2>Ordered Route</h2>
+    <div class="list-item">
+      <strong>Stop 1:</strong> L042
+      <div class="small">Completed</div>
+    </div>
+    <div class="list-item">
+      <strong>Stop 2:</strong> L107
+      <div class="small">Next Stop</div>
+    </div>
+    <div class="list-item">
+      <strong>Stop 3:</strong> L264
+      <div class="small">Urgent Delivery</div>
+    </div>
+    <div class="list-item">
+      <strong>Stop 4:</strong> L215
+      <div class="small">Diverted Route</div>
+    </div>
+    <div class="list-item">
+      <strong>Stop 5:</strong> L301
+      <div class="small">Pending</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Driver Actions</h2>
+    <p>✅ Mark delivery completed</p>
+    <p>📍 Follow updated route</p>
+    <p>📞 Call customer</p>
+    <p>⏱ Stay within 2.5-hour route limit</p>
+  </div>
+</body>
+</html>
